@@ -1,0 +1,32 @@
+# 仓库统一以 LF 存储，Windows 检出时按需转换，避免跨平台换行冲突
+* text=auto
+
+*.java   text
+*.js     text
+*.vue    text
+*.json   text
+*.yml    text
+*.yaml   text
+*.md     text
+*.sql    text
+*.html   text
+*.css    text
+
+# 批处理脚本必须保持 CRLF，否则 Windows 下无法执行
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+*.sh     text eol=lf
+
+# 二进制文件不做换行转换
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.svg    text
+*.woff   binary
+*.woff2  binary
+*.ttf    binary
+*.jar    binary
+*.xlsx   binary
+*.docx   binary

@@ -1,0 +1,262 @@
+/* ---------------- 设计变量 ---------------- */
+:root {
+  --brand: #F04E8B;
+  --brand-soft: #FFF0F5;
+  --bg: #FDF8FA;
+  --surface: #ffffff;
+  --line: #F2EAEE;
+  --line-strong: #EDE4E9;
+  --text: #1f2329;
+  --text-2: #646a73;
+  --text-3: #9B949E;
+  --ok: #2FB98A;
+  --warn: #F0A04E;
+  --danger: #E0635B;
+  --radius: 10px;
+
+  /* 覆盖 Element Plus 主色，避免默认的那个亮蓝 */
+  --el-color-primary: #F04E8B;
+  --el-color-primary-light-3: #F583AC;
+  --el-color-primary-light-5: #FBA6C4;
+  --el-color-primary-light-7: #FDC9DB;
+  --el-color-primary-light-8: #FDDEE9;
+  --el-color-primary-light-9: #FFF0F5;
+  --el-color-primary-dark-2: #D93776;
+  --el-border-radius-base: 6px;
+  --el-font-size-base: 13px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------- 表格 ---------------- */
+.el-table {
+  --el-table-border-color: var(--line);
+  --el-table-header-bg-color: #FDFAFB;
+  --el-table-row-hover-bg-color: #FFF8FB;
+  font-size: 13px;
+}
+
+.el-table th.el-table__cell {
+  font-weight: 500;
+  color: var(--text-3);
+  font-size: 12.5px;
+  padding: 10px 0;
+}
+
+.el-table td.el-table__cell {
+  padding: 12px 0;
+}
+
+.el-table .cell {
+  line-height: 1.5;
+}
+
+/* ---------------- 组件微调 ---------------- */
+.el-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(31, 35, 41, 0.03);
+}
+
+.el-card__body {
+  padding: 0;
+}
+
+.el-button {
+  font-weight: 400;
+}
+
+.el-button--primary {
+  --el-button-text-color: #fff;
+}
+
+.el-dialog {
+  border-radius: 12px;
+}
+
+.el-dialog__header {
+  padding: 20px 24px 8px;
+  margin-right: 0;
+}
+
+.el-dialog__title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.el-dialog__body {
+  padding: 12px 24px;
+}
+
+.el-dialog__footer {
+  padding: 8px 24px 20px;
+}
+
+.el-drawer__header {
+  margin-bottom: 0;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.el-drawer__body {
+  padding: 24px;
+}
+
+.el-pagination {
+  --el-pagination-font-size: 13px;
+}
+
+/* ---------------- 通用排版 ---------------- */
+.mono {
+  font-family: 'SF Mono', 'JetBrains Mono', Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.2px;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+.muted {
+  color: var(--text-3);
+}
+
+.row-main {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.row-sub {
+  color: var(--text-3);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* 状态点 */
+.dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.dot i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* 头像 */
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 工具栏 */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.toolbar .grow {
+  flex: 1;
+}
+
+.table-wrap {
+  padding: 4px 20px 0;
+}
+
+.pager {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 20px;
+}
+
+.empty-box {
+  padding: 40px 0;
+}
+
+/* ---------------- 详情抽屉 ---------------- */
+.d-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.d-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 26px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.info-item label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+
+.info-item span {
+  font-size: 13px;
+  color: var(--text);
+  word-break: break-word;
+}
+
+/* 表单两列时标签放上面更好看 */
+.el-form--label-top .el-form-item__label {
+  padding-bottom: 4px;
+  color: var(--text-2);
+  font-size: 12.5px;
+}
